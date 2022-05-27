@@ -3,6 +3,7 @@ from discord.ext import commands
 import os
 os.system("clear")
 
+token = input("Token: ")
 channel = input("Channel ID: ")
 
 bot = commands.Bot(command_prefix="!")
@@ -17,4 +18,4 @@ async def send(ctx,member:discord.Member,text):
 		await ctx.channel.send("สำเร็จ",delete_after=5)
 		await ctx.message.delete()
 	
-bot.run("โทเคนบอท")
+bot.run(token)
